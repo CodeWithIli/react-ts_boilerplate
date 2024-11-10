@@ -2,8 +2,8 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigator from "./router/navigator";
 
-//import { AuthProvider } from './contexts/AuthContext'
-//
+import { AuthProvider } from './contexts/AuthContext'
+
 //import Router from './router'
 //
 //import Loading from './components/Loading/Loading'
@@ -11,11 +11,11 @@ import Navigator from "./router/navigator";
 const App = () => {
   return (
     <HelmetProvider>
-      {/*<AuthProvider>*/}
+      <AuthProvider>
       <BrowserRouter>
         <Navigator />
       </BrowserRouter>
-      {/*</AuthProvider>*/}
+      </AuthProvider>
     </HelmetProvider>
   );
 };
