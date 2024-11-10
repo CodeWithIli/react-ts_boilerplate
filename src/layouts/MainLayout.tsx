@@ -1,9 +1,13 @@
 import { Layout } from "antd";
-import { IMainLayout } from "../types/layout-types";
+import React from "react";
 
 const { Header, Footer, Content } = Layout;
 
-const MainLayout: React.FC<IMainLayout> = ({ children }) => {
+interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <Layout>
       <Header className="text-white">This is a header</Header>

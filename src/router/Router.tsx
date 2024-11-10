@@ -1,7 +1,14 @@
 import MainLayout from "../layouts/MainLayout";
-import { Routes } from "../types/routing-types";
 
-export const navRoutes: Routes[] = [
+interface RouterNode {
+  key: number;
+  name: string;
+  path: string;
+  element: React.ReactElement;
+}
+
+
+export const Router: RouterNode[] = [
   {
     key: 0,
     name: "Home",
